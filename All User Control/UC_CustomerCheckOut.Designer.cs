@@ -29,21 +29,28 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtCheckOutDate = new Bunifu.Framework.UI.BunifuDatepicker();
             this.btnCheckOut = new ReaLTaiizor.Controls.CyberButton();
             this.txtName = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox1 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox2 = new RJCodeAdvance.RJControls.RJTextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +63,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(501, 147);
+            this.label2.Location = new System.Drawing.Point(457, 147);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 30);
             this.label2.TabIndex = 10;
@@ -66,30 +73,17 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(77, 47);
+            this.label1.Location = new System.Drawing.Point(63, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(436, 49);
             this.label1.TabIndex = 9;
             this.label1.Text = "Customer Check Out";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(86, 255);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(1368, 572);
-            this.dataGridView1.TabIndex = 12;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(89, 877);
+            this.label5.Location = new System.Drawing.Point(37, 888);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(87, 30);
             this.label5.TabIndex = 19;
@@ -99,7 +93,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(456, 879);
+            this.label3.Location = new System.Drawing.Point(403, 888);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(125, 30);
             this.label3.TabIndex = 19;
@@ -109,7 +103,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(815, 877);
+            this.label4.Location = new System.Drawing.Point(771, 877);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(143, 30);
             this.label4.TabIndex = 19;
@@ -123,7 +117,7 @@
             this.txtCheckOutDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtCheckOutDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.txtCheckOutDate.FormatCustom = null;
-            this.txtCheckOutDate.Location = new System.Drawing.Point(820, 913);
+            this.txtCheckOutDate.Location = new System.Drawing.Point(776, 913);
             this.txtCheckOutDate.Margin = new System.Windows.Forms.Padding(10, 8, 6, 8);
             this.txtCheckOutDate.Name = "txtCheckOutDate";
             this.txtCheckOutDate.Size = new System.Drawing.Size(348, 65);
@@ -156,7 +150,7 @@
             this.btnCheckOut.Lighting = false;
             this.btnCheckOut.LinearGradient_Background = false;
             this.btnCheckOut.LinearGradientPen = false;
-            this.btnCheckOut.Location = new System.Drawing.Point(1201, 860);
+            this.btnCheckOut.Location = new System.Drawing.Point(1157, 860);
             this.btnCheckOut.Name = "btnCheckOut";
             this.btnCheckOut.PenWidth = 15;
             this.btnCheckOut.Rounding = true;
@@ -180,7 +174,7 @@
             this.txtName.BorderSize = 2;
             this.txtName.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.ForeColor = System.Drawing.Color.Black;
-            this.txtName.Location = new System.Drawing.Point(506, 181);
+            this.txtName.Location = new System.Drawing.Point(462, 181);
             this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Multiline = false;
             this.txtName.Name = "txtName";
@@ -194,56 +188,10 @@
             this.txtName.UnderlinedStyle = false;
             this.txtName._TextChanged += new System.EventHandler(this.txtName__TextChanged);
             // 
-            // rjTextBox1
-            // 
-            this.rjTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox1.BorderColor = System.Drawing.Color.Transparent;
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.rjTextBox1.BorderRadius = 0;
-            this.rjTextBox1.BorderSize = 2;
-            this.rjTextBox1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox1.ForeColor = System.Drawing.Color.Black;
-            this.rjTextBox1.Location = new System.Drawing.Point(94, 913);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox1.Multiline = false;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.rjTextBox1.PlaceholderText = "Enter Full Name";
-            this.rjTextBox1.Size = new System.Drawing.Size(317, 45);
-            this.rjTextBox1.TabIndex = 26;
-            this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderlinedStyle = false;
-            this.rjTextBox1._TextChanged += new System.EventHandler(this.txtName__TextChanged);
-            // 
-            // rjTextBox2
-            // 
-            this.rjTextBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox2.BorderColor = System.Drawing.Color.Transparent;
-            this.rjTextBox2.BorderFocusColor = System.Drawing.Color.Transparent;
-            this.rjTextBox2.BorderRadius = 0;
-            this.rjTextBox2.BorderSize = 2;
-            this.rjTextBox2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox2.ForeColor = System.Drawing.Color.Black;
-            this.rjTextBox2.Location = new System.Drawing.Point(461, 913);
-            this.rjTextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox2.Multiline = false;
-            this.rjTextBox2.Name = "rjTextBox2";
-            this.rjTextBox2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox2.PasswordChar = false;
-            this.rjTextBox2.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.rjTextBox2.PlaceholderText = "Enter Full Name";
-            this.rjTextBox2.Size = new System.Drawing.Size(317, 45);
-            this.rjTextBox2.TabIndex = 26;
-            this.rjTextBox2.Texts = "";
-            this.rjTextBox2.UnderlinedStyle = false;
-            this.rjTextBox2._TextChanged += new System.EventHandler(this.txtName__TextChanged);
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel4.Location = new System.Drawing.Point(506, 233);
+            this.panel4.Location = new System.Drawing.Point(462, 233);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(649, 5);
             this.panel4.TabIndex = 32;
@@ -251,7 +199,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel1.Location = new System.Drawing.Point(94, 965);
+            this.panel1.Location = new System.Drawing.Point(42, 965);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(317, 5);
             this.panel1.TabIndex = 32;
@@ -259,30 +207,128 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel2.Location = new System.Drawing.Point(461, 965);
+            this.panel2.Location = new System.Drawing.Point(408, 965);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(317, 5);
             this.panel2.TabIndex = 32;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView1.GridColor = System.Drawing.Color.White;
+            this.dataGridView1.Location = new System.Drawing.Point(42, 281);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.Size = new System.Drawing.Size(1445, 554);
+            this.dataGridView1.TabIndex = 33;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Room No";
+            this.Column1.MinimumWidth = 8;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 150;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Status";
+            this.Column2.MinimumWidth = 8;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 150;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Room Type";
+            this.Column3.MinimumWidth = 8;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 150;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Bed Type";
+            this.Column4.MinimumWidth = 8;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 150;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Price";
+            this.Column5.MinimumWidth = 8;
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 150;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.White;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.Black;
+            this.textBox1.Location = new System.Drawing.Point(408, 927);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(330, 40);
+            this.textBox1.TabIndex = 34;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.White;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.ForeColor = System.Drawing.Color.Black;
+            this.textBox2.Location = new System.Drawing.Point(42, 927);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(330, 40);
+            this.textBox2.TabIndex = 34;
             // 
             // UC_CustomerCheckOut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.rjTextBox2);
-            this.Controls.Add(this.rjTextBox1);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.btnCheckOut);
             this.Controls.Add(this.txtCheckOutDate);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "UC_CustomerCheckOut";
             this.Size = new System.Drawing.Size(1833, 1298);
@@ -298,17 +344,22 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private Bunifu.Framework.UI.BunifuDatepicker txtCheckOutDate;
         private ReaLTaiizor.Controls.CyberButton btnCheckOut;
         private RJCodeAdvance.RJControls.RJTextBox txtName;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox2;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

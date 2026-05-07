@@ -42,5 +42,9 @@ namespace HotelManagmentSystem.All_User_Control
             } 
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

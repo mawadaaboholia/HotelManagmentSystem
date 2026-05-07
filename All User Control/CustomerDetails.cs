@@ -16,5 +16,20 @@ namespace HotelManagmentSystem.All_User_Control
         {
             InitializeComponent();
         }
+
+        private void btnAlloteRoom_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void CustomerDetails_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -44,5 +44,50 @@ namespace HotelManagmentSystem.All_User_Control
         {
 
         }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void hopeComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCheckIn_onValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

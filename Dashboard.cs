@@ -20,11 +20,15 @@ namespace HotelManagmentSystem
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            uC_AddRoom1.Visible = false;
+            maintenance1.Visible =false;
+            uC_Gym1.Visible = false;
+            uC_Dashboard1.Visible = true;
+           
             uC_CustomerRegistraion1.Visible = false;
             uC_CustomerCheckOut1.Visible = false;
             customerDetails1.Visible = false;
             uC_Employee1.Visible = false;
+            uC_Financials1.Visible = false;
            // btnAddRoom.PerformClick();
         }
 
@@ -41,7 +45,7 @@ namespace HotelManagmentSystem
             object target = sender;
             if (sender is PictureBox pb) target = pb.Parent;
 
-            var myButtons = new[] { btnAddRoom, btnCustomerRegistration, btnCheckout, btnCustomerDetails, btnEmployee };
+            var myButtons = new[] { btnLogout, btnCustomerRegistration, btnCheckout, btnCustomerDetails, btnEmployee ,btnFinancials,btnGym,btnMaintenance,btnDashboard };
             
 
             for (int i = 0; i < myButtons.Length; i++)
@@ -62,18 +66,18 @@ namespace HotelManagmentSystem
             }
         }
 
-        private void btnAddRoom_Click(object sender, EventArgs e)
-        {   uC_AddRoom1.Visible= true;
-            uC_AddRoom1.BringToFront();
-            MovingPanel.Top = btnAddRoom.Top + 45;
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            MovingPanel.Top = btnLogout.Top + 65;
             ActivateButton(sender);
         }
 
  
         private void btnCustomerRegistration_Click_1(object sender, EventArgs e)
         {
-
-            MovingPanel.Top = btnCustomerRegistration.Top + 45;
+            uC_Dashboard1.Visible = false;
+            MovingPanel.Top = btnCustomerRegistration.Top + 65;
             uC_CustomerRegistraion1.Visible= true;
             uC_CustomerRegistraion1.BringToFront();
             ActivateButton(sender);
@@ -81,26 +85,28 @@ namespace HotelManagmentSystem
 
         private void btnCheckout_Click(object sender, EventArgs e)
         {
+            uC_Dashboard1.Visible = false;
             uC_CustomerCheckOut1.Visible = true;
             uC_CustomerCheckOut1.BringToFront();
-            MovingPanel.Top = btnCheckout.Top+45;
+            MovingPanel.Top = btnCheckout.Top+65;
             ActivateButton(sender);
         }
 
         private void btnCustomerDetails_Click(object sender, EventArgs e)
         {
+            uC_Dashboard1.Visible = false;
             customerDetails1.Visible = true;
             customerDetails1.BringToFront();
-            MovingPanel.Top = btnCustomerDetails.Top + 45;
+            MovingPanel.Top = btnCustomerDetails.Top + 65;
             ActivateButton(sender);
         }
 
         private void btnEmployee_Click(object sender, EventArgs e)
         {
-
+            uC_Dashboard1.Visible = false;
             uC_Employee1.Visible = true;
                 uC_Employee1.BringToFront();
-            MovingPanel.Top = btnEmployee.Top + 45;
+            MovingPanel.Top = btnEmployee.Top + 65;
             ActivateButton(sender);
         }
 
@@ -117,6 +123,41 @@ namespace HotelManagmentSystem
         private void uC_CustomerCheckOut1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnFinancials_Click(object sender, EventArgs e)
+        {
+            uC_Financials1.BringToFront();
+            uC_Financials1.Visible = true;
+            uC_Dashboard1.Visible = false;
+            MovingPanel.Top = btnFinancials.Top + 65;
+            ActivateButton(sender);
+        }
+
+        private void btnMaintenance_Click(object sender, EventArgs e)
+        {
+            maintenance1.Visible = true;
+            maintenance1.BringToFront();    
+            uC_Dashboard1.Visible = false;
+            MovingPanel.Top = btnMaintenance.Top + 65;
+            ActivateButton(sender);
+        }
+
+        private void btnGym_Click(object sender, EventArgs e)
+        {
+            uC_Gym1.Visible = true;
+            uC_Gym1.BringToFront();
+            uC_Dashboard1.Visible = false;
+            MovingPanel.Top = btnGym.Top + 65;
+            ActivateButton(sender);
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            uC_Dashboard1.Visible= true;
+            uC_Dashboard1.BringToFront();
+            MovingPanel.Top = btnDashboard.Top + 65;
+            ActivateButton(sender);
         }
     }
 }

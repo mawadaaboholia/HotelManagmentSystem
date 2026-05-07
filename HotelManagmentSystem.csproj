@@ -71,6 +71,12 @@
     <Compile Include="All User Control\CustomerDetails.Designer.cs">
       <DependentUpon>CustomerDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="All User Control\Maintenance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="All User Control\Maintenance.Designer.cs">
+      <DependentUpon>Maintenance.cs</DependentUpon>
+    </Compile>
     <Compile Include="All User Control\UC_AddRoom.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -89,17 +95,41 @@
     <Compile Include="All User Control\UC_CustomerRegistraion.Designer.cs">
       <DependentUpon>UC_CustomerRegistraion.cs</DependentUpon>
     </Compile>
+    <Compile Include="All User Control\UC_Dashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="All User Control\UC_Dashboard.Designer.cs">
+      <DependentUpon>UC_Dashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="All User Control\UC_Employee.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="All User Control\UC_Employee.Designer.cs">
       <DependentUpon>UC_Employee.cs</DependentUpon>
     </Compile>
+    <Compile Include="All User Control\UC_Financials.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="All User Control\UC_Financials.Designer.cs">
+      <DependentUpon>UC_Financials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="All User Control\UC_Gym.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="All User Control\UC_Gym.Designer.cs">
+      <DependentUpon>UC_Gym.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmForgetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmForgetPassword.Designer.cs">
+      <DependentUpon>frmForgetPassword.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -112,6 +142,9 @@
     <EmbeddedResource Include="All User Control\CustomerDetails.resx">
       <DependentUpon>CustomerDetails.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="All User Control\Maintenance.resx">
+      <DependentUpon>Maintenance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="All User Control\UC_AddRoom.resx">
       <DependentUpon>UC_AddRoom.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,11 +154,23 @@
     <EmbeddedResource Include="All User Control\UC_CustomerRegistraion.resx">
       <DependentUpon>UC_CustomerRegistraion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="All User Control\UC_Dashboard.resx">
+      <DependentUpon>UC_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="All User Control\UC_Employee.resx">
       <DependentUpon>UC_Employee.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="All User Control\UC_Financials.resx">
+      <DependentUpon>UC_Financials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="All User Control\UC_Gym.resx">
+      <DependentUpon>UC_Gym.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmForgetPassword.resx">
+      <DependentUpon>frmForgetPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
